@@ -8,11 +8,11 @@ import wtf.alexis.licorice.mod.{ModCategory, Mod}
 /**
  * Created by Sage on 09-May-15.
  */
-class Speed extends Mod("Speeeeeeed", Keyboard.KEY_F, ModCategory.MOVEMENT) {
+class Speed extends Mod("Speed", Keyboard.KEY_F, ModCategory.MOVEMENT) {
 
   @Subscribe
   def onUpdate(eventOnUpdate: EventOnUpdate) = mc.thePlayer.setSprinting(canSprint)
 
-  def canSprint = mc.thePlayer.moveForward > 0.0F && mc.thePlayer.getFoodStats.getFoodLevel > 6 && !mc.thePlayer.isCollidedHorizontally && !mc.thePlayer.isSneaking && !mc.thePlayer.isInWater
+  def canSprint = mc.thePlayer.moveForward > 0.0000001F && mc.thePlayer.getFoodStats.getFoodLevel > 6 && !mc.thePlayer.isCollidedHorizontally && !mc.thePlayer.isSneaking && !mc.thePlayer.isInWater
 
 }
