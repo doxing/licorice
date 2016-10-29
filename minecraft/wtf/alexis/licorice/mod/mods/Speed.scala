@@ -8,7 +8,7 @@ import wtf.alexis.licorice.mod.{ModCategory, Mod}
 /**
  * Created by Sage on 09-May-15.
  */
-class Speed extends Mod("Speed", Keyboard.KEY_F, ModCategory.MOVEMENT) {
+class Speed extends Mod("Sprint", Keyboard.KEY_F, ModCategory.MOVEMENT) {
 
   @Subscribe
   def onUpdate(eventOnUpdate: EventOnUpdate) = mc.thePlayer.setSprinting(canSprint)
